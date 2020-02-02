@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create product</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+     .first-menu-item {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .last-menu-item {
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+    }
+    *, #accordion div, .middle-menu-item {
+        border-radius: 0 !important;
+    }
+    .card-no-border{
+        border: none;
+    }
+    </style>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <!--top menu-->
+        <div class="mb-2">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="#">会社</a><!--company-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">ホームページ <span class="sr-only">(current)</span></a><!--home page-->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">製品</a><!--products-->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">発売中</a><!--on sale-->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">お問い合わせ</a><!--contact us-->
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropAboutUs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                私たちに関しては<!--about us-->
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropAboutUs">
+                                <a class="dropdown-item" href="#">歴史</a><!--history-->
+                                <a class="dropdown-item" href="#">従業員</a><!--employees-->
+                                <a class="dropdown-item" href="#">私たちの店</a><!--our stores-->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!--top menu-->
+        <!--content layout-->
+        <div class="row">
+            <div class="col-2">
+                メインメニュー<!--main menu--> 
+
+                <div id="accordion" >
+                    <div class="card first-menu-item card-no-border">
+                      <div class="card-header bg-primary" id="headingOne">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link text-white" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Products
+                          </button>
+                        </h5>
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body" style="padding: 4px 0px 4px 0px;">
+                            <ul class="list-group first-menu-item">
+                                <li class="list-group-item" style="border:0px; margin: 0px; padding: 0px;"><a class="dropdown-item" href="#">Dashboard</a></li>
+                                <li class="list-group-item" style="border:0px; margin: 0px; padding: 0px;"><a class="dropdown-item" href="#">List</a></li>
+                                <li class="list-group-item" style="border:0px; margin: 0px; padding: 0px;"><a class="dropdown-item" href="#">New</a></li>
+                                <li class="list-group-item" style="border:0px; margin: 0px; padding: 0px;"><a class="dropdown-item" href="#">History</a></li>
+                              </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card middle-menu-item card-no-border">
+                      <div class="card-header bg-primary" id="headingTwo">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link collapsed text-white" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Orders
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapseTwo" class="collapse"  aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body " style="padding: 4px 0px 4px 0px;">
+                            <ul class="list-group">
+                                <li class="list-group-item" style="border:0px; margin: 0px; padding: 0px;"><a class="dropdown-item" href="#">Dashboard</a></li>
+                                <li class="list-group-item" style="border:0px; margin: 0px; padding: 0px;"><a class="dropdown-item" href="#">List</a></li>
+                                <li class="list-group-item" style="border:0px; margin: 0px; padding: 0px;"><a class="dropdown-item" href="#">New</a></li>
+                                <li class="list-group-item" style="border:0px; margin: 0px; padding: 0px;"><a class="dropdown-item" href="#">History</a></li>
+                              </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card last-menu-item card-no-border">
+                      <div class="card-header bg-primary" id="headingThree">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link collapsed text-white" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Warehouse
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body " style="padding: 4px 0px 4px 0px;">
+                            <ul class="list-group">
+                                <li class="list-group-item" style="border:0px; margin: 0px; padding: 0px;"><a class="dropdown-item" href="#">Dashboard</a></li>
+                                <li class="list-group-item" style="border:0px; margin: 0px; padding: 0px;"><a class="dropdown-item" href="#">List</a></li>
+                                <li class="list-group-item" style="border:0px; margin: 0px; padding: 0px;"><a class="dropdown-item" href="#">New</a></li>
+                                <li class="list-group-item" style="border:0px; margin: 0px; padding: 0px;"><a class="dropdown-item" href="#">History</a></li>
+                              </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+            <div class="col-8">
+                <embed src="pdfs/sample pdf.pdf" type="application/pdf" width="100%" height="1000px"/>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <!--content layout-->
+    </div>
+</body>
+</html>
